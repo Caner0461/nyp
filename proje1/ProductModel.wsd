@@ -1,0 +1,30 @@
+@startuml
+title Product Model 
+class Product {
+    -name
+    -price
+    -quantity
+    ----
+    +getName()
+    +getPrice()
+    +getQuantity()
+    ----
+    +setName(value)
+    +setPrice(value)
+    +setQuantity(value)
+    ----
+    +Product(name,price,quantity)
+    ----
+    +getTotalPrice()
+    +toString()
+}
+Product -up-|> Object :"<<extends>>"
+hide empty members
+
+class ProductHelper{
+    +createltemFromText()
+    +getBalance()
+}
+ProductHelper -left-|> Object :"<<extends>>"
+
+@enduml 
